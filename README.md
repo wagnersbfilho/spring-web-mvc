@@ -1,4 +1,4 @@
-### Aplicação Spring Web MVC - Básico
+### Aplicação Spring Web MVC - CRUD Básico
 
 <b>Requisitos:</b>
 - Java 11
@@ -8,6 +8,8 @@
 - Spring Boot
 - Spring Validation
 - Thymeleaf
+- JPA
+- H2
 
 <b>Padrões de Projeto:</b>
 - MVC

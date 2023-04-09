@@ -6,17 +6,19 @@
 </head>
 <body>
 
-<h1>New Jedi</h1>
+<h1>Edit Jedi</h1>
 
 <form th:action="@{/save-jedi}" th:object="${jedi}" method="post">
-    <input type="text" name="name"     th:field="*{name}"     th:placeholder="Name"/> <br/>
+    <input type="hidden" name="id" th:field="*{id}"/>
+
+    <input type="text" name="name"  th:field="*{name}"  th:placeholder="Name"/> <br/>
     <span th:if="${#fields.hasErrors('name')}" th:errors="*{name}">Name Error</span>
     <br/>
 
-    <input type="text" name="lastName" th:field="*{lastname}" th:placeholder="lastName"/> <br/>
+    <input type="text" name="lastnName" th:field="*{lastname}" th:placeholder="LastName"/> <br/>
     <span th:if="${#fields.hasErrors('lastname')}" th:errors="*{lastname}">LastName Error</span>
     <br/>
-    <button type="submit">Create a new Jedi</button>
+    <button type="submit">Update Jedi</button>
 </form>
 
 <br>
