@@ -29,9 +29,6 @@ public class JediController {
         modelAndView.addObject("allJedi", repository.getAll());
         return modelAndView;
     }
-//    public String jedi() {
-//        return "jedi/listar";
-//    }
 
     @GetMapping("/new-jedi")
     public String novoJedi(Model model) {
@@ -51,16 +48,5 @@ public class JediController {
         redirect.addFlashAttribute("message", jedi.getName()+" cadastrado com sucesso!");
 
         return "redirect:list-jedi";
-
-//        final ModelAndView modelAndView = new ModelAndView();
-//        modelAndView.setViewName("jedi/listar");
-//        if (result.hasErrors()) {
-//            modelAndView.setViewName("jedi/incluir");
-//            return modelAndView;
-//        }
-//        repository.add(jedi);
-//        modelAndView.addObject("allJedi", repository.getAll());
-//        redirect.addFlashAttribute("message", "Cadastrado com sucesso!");
-//        return modelAndView;
     }
 }
